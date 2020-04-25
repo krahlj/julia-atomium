@@ -1,0 +1,114 @@
+body {
+  font-family: Cerebri Sans, Helvetica, Arial, sans-serif;
+}
+
+.weatherApp {
+  margin: 100px auto;
+  padding: 100px 10px;
+  max-width: 700px;
+  background-image: url(../image/Mountain.jpg);
+  background-position: center;
+  background-size: 800px;
+  background-repeat: no-repeat;
+  border: 1px solid black;
+  border-radius: 25px;
+}
+
+#header {
+  margin: 10px 0px;
+  padding: 10px 0px;
+}
+
+h1 {
+  font-weight: 900;
+  line-height: 48px;
+  margin: 0;
+  color: #272044;
+  font-size: 30px;
+  text-align: left;
+}
+
+.temp {
+  font-weight: 900;
+  line-height: 48px;
+  margin: 0;
+  position: relative;
+  top: 5px;
+  text-align: center;
+  font-size: 55px;
+  color: #006ec5;
+  padding: 0 0 24px;
+}
+
+.unit {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+p {
+  font-size: 25px;
+  line-height: 28px;
+  text-align: center;
+  font-weight: 800;
+}
+
+.form-group {
+  position: relativ;
+  top: -10px;
+}
+
+.fa-cloud-showers-heavy {
+  color: #006ec5;
+  font-size: 60px;
+  padding-top: 10px;
+}
+
+.fa-wind,
+.fa-tint {
+  color: #006ec5;
+  font-size: 30px;
+  position: relative;
+  top: 20px;
+}
+
+.fa-cloud {
+  color: #006ec5;
+  font-size: 30px;
+  padding-top: 10px;
+}
+
+.mb-3 {
+  background-color: transparent;
+}
+.forecast {
+  line-height: 20px;
+  font-size: 25px;
+  margin: 0px 20px 0px 50px;
+}
+
+.btn-primary {
+  font-size: 20px;
+  margin: 0px 20px;
+  background-color: #006ec5;
+}
+
+.btn-secondary {
+  font-size: 20px;
+  margin: 0px 20px;
+}
+
+.card-title {
+  font-size: 25px;
+}
+
+.row {
+  text-align: center;
+}
+
+#date {
+  text-align: left;
+  font-size: 20px;
+  position: relative;
+  left: 120px;
+  font-weight: 900;
+}
