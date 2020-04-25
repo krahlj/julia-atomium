@@ -70,8 +70,6 @@ function showTemperature(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
-  document.querySelector("#precipitation").innerHTML =
-    response.data.main.precipitation;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
 }
 
