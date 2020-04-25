@@ -112,3 +112,9 @@ p {
   left: 120px;
   font-weight: 900;
 }
+
+.linkNetlify {
+  display: black;
+  display: visited black;
+  font-size: 22;
+}
