@@ -52,6 +52,13 @@ p {
   font-weight: 800;
 }
 
+p {
+  font-size: 25px;
+  line-height: 28px;
+  text-align: center;
+  font-weight: 800;
+}
+
 .form-group {
   position: relativ;
   top: -10px;
@@ -61,6 +68,13 @@ p {
   color: #006ec5;
   font-size: 60px;
   padding-top: 10px;
+}
+
+.description {
+  font-size: 25px;
+  line-height: 28px;
+  text-align: center;
+  font-weight: 800;
 }
 
 .fa-wind,
