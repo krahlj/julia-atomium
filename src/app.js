@@ -77,6 +77,7 @@ function showWeather(response) {
     "src",
     "http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png"
   );
+  iconElement.setAttribute("alt", response.data.weather[0].main);
 }
 
 function searchCity(city) {
@@ -92,6 +93,34 @@ function handleSubmit(event) {
 
 let form = document.querySelector("#searchForm");
 form.addEventListener("submit", handleSubmit);
+
+function weatherBerlin() {
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Berlin & appid=${apiKey}&units=metric`;
+  axios.get(`${apiUrl}&appId=${apiKey}`).then(showWeather);
+}
+let buttonBerlin = document.querySelector("#Berlin");
+buttonBerlin.addEventListener("click", weatherBerlin);
+
+function weatherHongKong() {
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Hong Kong & appid=${apiKey}&units=metric`;
+  axios.get(`${apiUrl}&appId=${apiKey}`).then(showWeather);
+}
+let buttonHongKong = document.querySelector("#HongKong");
+buttonHongKong.addEventListener("click", weatherHongKong);
+
+function weatherNairobi() {
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Nairobi & appid=${apiKey}&units=metric`;
+  axios.get(`${apiUrl}&appId=${apiKey}`).then(showWeather);
+}
+let buttonNairobi = document.querySelector("#Nairobi");
+buttonNairobi.addEventListener("click", weatherNairobi);
+
+function weatherMelbourne() {
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Melbourne & appid=${apiKey}&units=metric`;
+  axios.get(`${apiUrl}&appId=${apiKey}`).then(showWeather);
+}
+let buttonMelbourne = document.querySelector("#Melbourne");
+buttonMelbourne.addEventListener("click", weatherMelbourne);
 
 searchCity("Sydney");
 
