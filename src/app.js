@@ -62,7 +62,8 @@ let apiKey = "03ea0e1598afa46165d4faf7e2a6e9c8";
 function showWeather(response) {
   console.log(response.data.main.temp);
   document.querySelector("H1").innerHTML = response.data.name;
-  let currentTemp = Math.round(response.data.main.temp);
+  tempCelsius = response.data.main.temp;
+  let currentTemp = Math.round(tempCelsius);
   let tempElement = document.querySelector("#temperature");
   let iconElement = document.querySelector("#icon");
 
@@ -75,7 +76,7 @@ function showWeather(response) {
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   iconElement.setAttribute(
     "src",
-    "http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png"
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].main);
 }
@@ -141,3 +142,27 @@ function getCurrentPosition(event) {
 
 let currentLocation = document.querySelector("#currentButton");
 currentLocation.addEventListener("click", getCurrentPosition);
+
+//Temperature Conversion
+function tempToF(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temperature");
+  tempElement.innerHTML = Math.round((tempCelsius * 9) / 5 + 32);
+  conversionC.classList.remove("active");
+  conversionF.classList.add("active");
+}
+let conversionF = document.querySelector("#FTemp");
+conversionF.addEventListener("click", tempToF);
+
+function tempToC(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temperature");
+  tempElement.innerHTML = Math.round(tempCelsius);
+  conversionC.classList.add("active");
+  conversionF.classList.remove("active");
+}
+
+let conversionC = document.querySelector("#CTemp");
+conversionC.addEventListener("click", tempToC);
+
+let tempCelsius = null;

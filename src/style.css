@@ -64,10 +64,12 @@ p {
   top: -10px;
 }
 
-.fa-cloud-showers-heavy {
+#icon {
   color: #006ec5;
   font-size: 60px;
   padding-top: 10px;
+  background-color: transparent;
+  padding: 10px 10px;
 }
 
 .description {
@@ -75,6 +77,15 @@ p {
   line-height: 28px;
   text-align: center;
   font-weight: 800;
+}
+
+.active {
+  color: #006ec5;
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
 }
 
 .fa-wind,
