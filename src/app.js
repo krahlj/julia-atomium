@@ -81,9 +81,28 @@ function showWeather(response) {
   iconElement.setAttribute("alt", response.data.weather[0].main);
 }
 
+function showForecast(response) {
+  let forecastElement = document.querySelector("forecast");
+  let forecast = response.data.list[0];
+  console.log(forecast);
+  forecastElement.innerHTML = `
+    <div class="col-2">
+      <h3>Mon</h3>
+      <i class="fas fa-cloud"></i>
+      <div class="weather-forecast-temp">
+        <strong>${Math.round(forecast.main.temp_max)}°C</strong> $
+        {Math.round(forecast.main.temp_min)}°C
+      </div>
+    </div>
+  `;
+}
+
 function searchCity(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city} & appid=${apiKey}&units=metric`;
   axios.get(`${apiUrl}&appId=${apiKey}`).then(showWeather);
+
+  apiUrl = `api.openweathermap.org/data/2.5/forecast?q=${city} & appid=${apiKey}&units=metric`;
+  axios.get(`${apiUrl}&appId=${apiKey}`).then(showForecast);
 }
 
 function handleSubmit(event) {
@@ -166,3 +185,5 @@ let conversionC = document.querySelector("#CTemp");
 conversionC.addEventListener("click", tempToC);
 
 let tempCelsius = null;
+
+//Forecast
