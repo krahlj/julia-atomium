@@ -22,8 +22,9 @@ let weather = {
 };
 
 //date
-function formatDate(date) {
-  let dateNumber = now.getDate();
+function formatDate(timestamp) {
+  let date = new Date();
+  let dateNumber = date.getDate();
   let hours = ("0" + date.getHours()).slice(-2);
   let minutes = ("0" + date.getMinutes()).slice(-2);
   let year = date.getFullYear();
@@ -52,8 +53,16 @@ function formatDate(date) {
 }
 
 let currentDate = document.querySelector("#date");
-let now = new Date();
-currentDate.innerHTML = formatDate(now);
+
+currentDate.innerHTML = formatDate();
+
+function formatHours(timestamp) {
+  let date = new Date(timestamp);
+  let hours = ("0" + date.getHours()).slice(-2);
+  let minutes = ("0" + date.getMinutes()).slice(-2);
+  let year = date.getFullYear();
+  return `${hours}:${minutes}`;
+}
 
 //search a city& temp
 
@@ -82,16 +91,19 @@ function showWeather(response) {
 }
 
 function showForecast(response) {
-  let forecastElement = document.querySelector("forecast");
+  let forecastElement = document.querySelector("#forecast");
   let forecast = response.data.list[0];
   console.log(forecast);
   forecastElement.innerHTML = `
     <div class="col-2">
-      <h3>Mon</h3>
-      <i class="fas fa-cloud"></i>
+      <h3>${formatHours(forecast.dt * 1000)}</h3>
+      <img src="http://openweathermap.org/img/wn/${
+        forecast.weather[0].icon
+      }@2x.png"}
       <div class="weather-forecast-temp">
-        <strong>${Math.round(forecast.main.temp_max)}°C</strong> $
-        {Math.round(forecast.main.temp_min)}°C
+        <strong>${Math.round(forecast.main.temp_max)}°C</strong> ${Math.round(
+    forecast.main.temp_min
+  )}°C
       </div>
     </div>
   `;
@@ -101,7 +113,7 @@ function searchCity(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city} & appid=${apiKey}&units=metric`;
   axios.get(`${apiUrl}&appId=${apiKey}`).then(showWeather);
 
-  apiUrl = `api.openweathermap.org/data/2.5/forecast?q=${city} & appid=${apiKey}&units=metric`;
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city} & appid=${apiKey}&units=metric`;
   axios.get(`${apiUrl}&appId=${apiKey}`).then(showForecast);
 }
 
@@ -117,6 +129,8 @@ form.addEventListener("submit", handleSubmit);
 function weatherBerlin() {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Berlin & appid=${apiKey}&units=metric`;
   axios.get(`${apiUrl}&appId=${apiKey}`).then(showWeather);
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=Berlin & appid=${apiKey}&units=metric`;
+  axios.get(`${apiUrl}&appId=${apiKey}`).then(showForecast);
 }
 let buttonBerlin = document.querySelector("#Berlin");
 buttonBerlin.addEventListener("click", weatherBerlin);
@@ -124,6 +138,8 @@ buttonBerlin.addEventListener("click", weatherBerlin);
 function weatherHongKong() {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Hong Kong & appid=${apiKey}&units=metric`;
   axios.get(`${apiUrl}&appId=${apiKey}`).then(showWeather);
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=Hong Kong & appid=${apiKey}&units=metric`;
+  axios.get(`${apiUrl}&appId=${apiKey}`).then(showForecast);
 }
 let buttonHongKong = document.querySelector("#HongKong");
 buttonHongKong.addEventListener("click", weatherHongKong);
@@ -131,6 +147,8 @@ buttonHongKong.addEventListener("click", weatherHongKong);
 function weatherNairobi() {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Nairobi & appid=${apiKey}&units=metric`;
   axios.get(`${apiUrl}&appId=${apiKey}`).then(showWeather);
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=Nairobi & appid=${apiKey}&units=metric`;
+  axios.get(`${apiUrl}&appId=${apiKey}`).then(showForecast);
 }
 let buttonNairobi = document.querySelector("#Nairobi");
 buttonNairobi.addEventListener("click", weatherNairobi);
@@ -138,6 +156,8 @@ buttonNairobi.addEventListener("click", weatherNairobi);
 function weatherMelbourne() {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Melbourne & appid=${apiKey}&units=metric`;
   axios.get(`${apiUrl}&appId=${apiKey}`).then(showWeather);
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=Melbourne & appid=${apiKey}&units=metric`;
+  axios.get(`${apiUrl}&appId=${apiKey}`).then(showForecast);
 }
 let buttonMelbourne = document.querySelector("#Melbourne");
 buttonMelbourne.addEventListener("click", weatherMelbourne);
