@@ -1,26 +1,3 @@
-let weather = {
-  paris: {
-    temp: 19.7,
-    humidity: 80,
-  },
-  tokyo: {
-    temp: 17.3,
-    humidity: 50,
-  },
-  lisbon: {
-    temp: 30.2,
-    humidity: 20,
-  },
-  "san francisco": {
-    temp: 20.9,
-    humidity: 100,
-  },
-  moscow: {
-    temp: -5,
-    humidity: 20,
-  },
-};
-
 //date
 function formatDate(timestamp) {
   let date = new Date();
@@ -107,7 +84,7 @@ function showForecast(response) {
           forecast.weather[0].icon
         }@2x.png"}/>
         <div class="weather-forecast-temp">
-         <strong>${Math.round(forecast.main.temp_max)}°C</strong> ${Math.round(
+         <strong>${Math.round(forecast.main.temp_max)}</strong> ${Math.round(
       forecast.main.temp_min
     )}°C
         </div>

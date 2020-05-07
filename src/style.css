@@ -3,15 +3,15 @@ body {
 }
 
 .weatherApp {
-  margin: 100px auto;
-  padding: 100px 10px;
-  max-width: 600px;
-  background-image: url(../image/Mountain.jpg);
+  margin: 50px auto;
+  padding: 0px;
+  max-width: 500px;
+  background-image: url(../image/Sky1.jpg);
   background-position: center;
-  background-size: 800px;
+  background-size: 600px;
   background-repeat: no-repeat;
   border: 1px solid black;
-  border-radius: 25px;
+  border-radius: 20px;
 }
 
 #header {
@@ -23,11 +23,19 @@ h1 {
   font-weight: 900;
   line-height: 48px;
   margin: 0;
-  color: #2b580c;
+  color: black;
   font-size: 30px;
   text-align: left;
 }
 
+h3 {
+  font-weight: 200;
+  line-height: 48px;
+  margin: 0;
+  color: black;
+  font-size: 20px;
+  text-align: left;
+}
 .temp {
   font-weight: 900;
   line-height: 48px;
@@ -96,20 +104,24 @@ p {
 }
 .forecast {
   line-height: 20px;
-  font-size: 25px;
-  margin: 0px 20px 0px 50px;
+  font-size: 20px;
+  padding: 10px 10px;
+  background-color: antiquewhite;
 }
 
+.weather-forecast-temp {
+  font-size: 10px;
+}
 .btn-primary {
-  font-size: 20px;
-  margin: 0px 20px;
+  font-size: 15px;
+  margin: 0px 10px;
   background-color: #006ec5;
 }
 
 .btn-secondary {
-  font-size: 20px;
-  margin: 0px 10px;
-  patting: 10px 10px;
+  font-size: 15px;
+  margin: 0px 0px;
+  patting: 0px 0px;
 }
 
 .row {
@@ -120,7 +132,7 @@ p {
   text-align: left;
   font-size: 20px;
   position: relative;
-  left: 80px;
+  left: 30px;
   font-weight: 900;
 }
 
