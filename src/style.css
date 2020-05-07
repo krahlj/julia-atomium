@@ -52,13 +52,6 @@ p {
   font-weight: 800;
 }
 
-p {
-  font-size: 25px;
-  line-height: 28px;
-  text-align: center;
-  font-weight: 800;
-}
-
 .form-group {
   position: relativ;
   top: -10px;
@@ -96,12 +89,6 @@ p {
   top: 20px;
 }
 
-.fa-cloud {
-  color: #006ec5;
-  font-size: 30px;
-  padding-top: 10px;
-}
-
 .mb-3 {
   background-color: transparent;
   border: none;
@@ -121,7 +108,8 @@ p {
 
 .btn-secondary {
   font-size: 20px;
-  margin: 0px 20px;
+  margin: 0px 10px;
+  patting: 10px 10px;
 }
 
 .row {
