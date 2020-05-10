@@ -5,10 +5,10 @@ body {
 .weatherApp {
   margin: 30px auto;
   padding: 0px 30px;
-  max-width: 500px;
+  max-width: 620px;
   background-image: url(../image/Sky1.jpg);
   background-position: center;
-  background-size: 810px;
+  background-size: 650px;
   background-repeat: no-repeat;
   border: 1px solid black;
   border-radius: 20px;
@@ -20,19 +20,19 @@ body {
 }
 
 h1 {
-  font-weight: 800;
-  line-height: 48px;
+  font-weight: 750;
+  line-height: 45px;
   color: #448aff;
-  font-size: 40px;
+  font-size: 35px;
   text-align: left;
 }
 
 h3 {
-  font-weight: 200;
+  font-weight: 300;
   line-height: 48px;
   margin: 0;
   color: black;
-  font-size: 20px;
+  font-size: 15px;
   text-align: left;
 }
 .temp {
@@ -40,9 +40,10 @@ h3 {
   line-height: 48px;
   margin: 0;
   position: relative;
-  top: 20px;
+  top: -20px;
+  left: -100px;
   text-align: center;
-  font-size: 55px;
+  font-size: 65px;
   color: #448aff;
   padding: 0 0 24px;
 }
@@ -50,12 +51,15 @@ h3 {
 .unit {
   font-size: 20px;
   font-weight: 300;
+  position: relative;
+  left: -100px;
+  top: -40px;
 }
 
 p {
   font-size: 25px;
   line-height: 28px;
-  text-align: center;
+  text-align: left;
   font-weight: 800;
 }
 
@@ -65,18 +69,18 @@ p {
 }
 
 #icon {
-  color: #006ec5;
-  font-size: 60px;
-  padding-top: 10px;
-  background-color: transparent;
-  padding: 10px 10px;
+  background-color: #83b8e0;
+  width: 80px;
+  border-radius: 30px;
+  display: center;
 }
 
-.description {
+#description {
   font-size: 25px;
-  line-height: 28px;
-  text-align: center;
-  font-weight: 800;
+  text-align: left;
+  font-weight: 500;
+  position: relative;
+  right: 80px;
 }
 
 .active {
@@ -90,25 +94,22 @@ p {
 
 .fa-wind,
 .fa-tint {
-  color: #448aff;
+  color: #83b8e0;
+  background-color: transparent;
+  border-radius: 15px;
+  padding: 5px 5px;
   font-size: 30px;
   position: relative;
-  bottom: 50px;
+  bottom: 30px;
   right: -50px;
 }
 
-.mb-3 {
-  position: relative;
-  bottom: 20px;
-  background-color: transparent;
-  border: ;
-}
 .card-body {
   font-size: 30px;
   padding: 0px 0px;
   position: relative;
   right: -50px;
-  bottom: 40px;
+  bottom: 20px;
 }
 
 .btn-primary {
@@ -121,13 +122,8 @@ p {
 
 .btn-secondary {
   font-size: 16px;
-  margin: 10px 0px;
+  margin: 10px 3px;
   padding: 5px 5px;
-}
-
-.iconForecast {
-  position: relative;
-  right: 20px;
 }
 
 .forecast {
@@ -142,15 +138,23 @@ p {
 .weather-forecast-temp {
   font-size: 11px;
 }
+
+img {
+  width: 40px;
+  background-color: #83b8e0;
+  border-radius: 30px;
+}
+
 .form.form-group {
 }
 
 .date {
   text-align: left;
-  font-size: 20px;
+  font-size: 18px;
   position: relative;
-  left: 30px;
-  font-weight: 200;
+  top: 10px;
+  left: 100px;
+  font-weight: 600;
 }
 
 .linkNetlify {

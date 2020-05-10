@@ -47,7 +47,7 @@ let apiKey = "03ea0e1598afa46165d4faf7e2a6e9c8";
 
 function showWeather(response) {
   console.log(response.data.main.temp);
-  document.querySelector("H1").innerHTML = response.data.name;
+  document.querySelector("H1").innerHTML = response.data.name.toUpperCase();
   tempCelsius = response.data.main.temp;
   let currentTemp = Math.round(tempCelsius);
   let tempElement = document.querySelector("#temperature");
@@ -80,7 +80,7 @@ function showForecast(response) {
         <h3>
         ${formatHours(forecast.dt * 1000)}
         </h3>
-        <img src="http://openweathermap.org/img/wn/${
+        <img class="iconForecast"src="http://openweathermap.org/img/wn/${
           forecast.weather[0].icon
         }@2x.png"}/>
         <div class="weather-forecast-temp">
