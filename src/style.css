@@ -3,28 +3,27 @@ body {
 }
 
 .weatherApp {
-  margin: 50px auto;
-  padding: 0px;
+  margin: 30px auto;
+  padding: 0px 30px;
   max-width: 500px;
   background-image: url(../image/Sky1.jpg);
   background-position: center;
-  background-size: 600px;
+  background-size: 810px;
   background-repeat: no-repeat;
   border: 1px solid black;
   border-radius: 20px;
 }
 
 #header {
-  margin: 10px 0px;
-  padding: 10px 0px;
+  margin: 5px 0px;
+  padding: 5px 0px;
 }
 
 h1 {
-  font-weight: 900;
+  font-weight: 800;
   line-height: 48px;
-  margin: 0;
-  color: black;
-  font-size: 30px;
+  color: #448aff;
+  font-size: 40px;
   text-align: left;
 }
 
@@ -37,14 +36,14 @@ h3 {
   text-align: left;
 }
 .temp {
-  font-weight: 900;
+  font-weight: 1000;
   line-height: 48px;
   margin: 0;
   position: relative;
-  top: 5px;
+  top: 20px;
   text-align: center;
   font-size: 55px;
-  color: #006ec5;
+  color: #448aff;
   padding: 0 0 24px;
 }
 
@@ -91,49 +90,67 @@ p {
 
 .fa-wind,
 .fa-tint {
-  color: #006ec5;
+  color: #448aff;
   font-size: 30px;
   position: relative;
-  top: 20px;
+  bottom: 50px;
+  right: -50px;
 }
 
 .mb-3 {
+  position: relative;
+  bottom: 20px;
   background-color: transparent;
-  border: none;
-  font-size: 20px;
+  border: ;
 }
+.card-body {
+  font-size: 30px;
+  padding: 0px 0px;
+  position: relative;
+  right: -50px;
+  bottom: 40px;
+}
+
+.btn-primary {
+  font-size: 15px;
+  position: relative;
+  top: -15px;
+  right: 25px;
+  background-color: #006ec5;
+}
+
+.btn-secondary {
+  font-size: 16px;
+  margin: 10px 0px;
+  padding: 5px 5px;
+}
+
+.iconForecast {
+  position: relative;
+  right: 20px;
+}
+
 .forecast {
   line-height: 20px;
   font-size: 20px;
   padding: 10px 10px;
   background-color: antiquewhite;
+  position: relative;
+  right: 20px;
 }
 
 .weather-forecast-temp {
-  font-size: 10px;
+  font-size: 11px;
 }
-.btn-primary {
-  font-size: 15px;
-  margin: 0px 10px;
-  background-color: #006ec5;
+.form.form-group {
 }
 
-.btn-secondary {
-  font-size: 15px;
-  margin: 0px 0px;
-  patting: 0px 0px;
-}
-
-.row {
-  text-align: center;
-}
-
-#date {
+.date {
   text-align: left;
   font-size: 20px;
   position: relative;
   left: 30px;
-  font-weight: 900;
+  font-weight: 200;
 }
 
 .linkNetlify {
